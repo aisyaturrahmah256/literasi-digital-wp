@@ -1,0 +1,138 @@
+/**
+ * PayLexer Recommendation Banner
+ *
+ * Core styles notice children with `div.notice a` (0,1,2) and `.notice p`
+ * (0,1,1), which outrank a lone class, so every rule below is scoped to
+ * `.blossom-feminine-paylexer.notice` to win on specificity rather than !important.
+ */
+.blossom-feminine-paylexer.notice {
+	display: grid;
+	grid-template-columns: 20px 1fr;
+	column-gap: 10px;
+	align-items: start;
+	background: #fff;
+	border: 0;
+	border-left: 4px solid #5f47f6;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+	padding: 14px 48px 14px 12px;
+	margin: 0 0 14px;
+	position: relative;
+	animation: blossom-feminine-paylexer-in .25s ease-out;
+}
+
+.rtl .blossom-feminine-paylexer.notice {
+	border-left: 0;
+	border-right: 4px solid #5f47f6;
+	padding: 14px 12px 14px 48px;
+}
+
+@keyframes blossom-feminine-paylexer-in {
+	from { opacity: 0; transform: translateY(-4px); }
+	to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.blossom-feminine-paylexer.notice {
+		animation: none;
+	}
+}
+
+.blossom-feminine-paylexer.notice .blossom-feminine-paylexer-mark {
+	height: 21px;
+	display: flex;
+	align-items: center;
+}
+
+.blossom-feminine-paylexer.notice .blossom-feminine-paylexer-mark img {
+	width: 20px;
+	height: auto;
+	display: block;
+}
+
+.blossom-feminine-paylexer.notice h3 {
+	margin: 0 0 6px;
+	font-size: 15px;
+	font-weight: 600;
+	line-height: 21px;
+	color: #1e1e1e;
+}
+
+.blossom-feminine-paylexer.notice p {
+	margin: 0 0 12px;
+	padding: 0;
+	font-size: 13px;
+	line-height: 1.4;
+	color: #1e1e1e;
+}
+
+.blossom-feminine-paylexer.notice .blossom-feminine-paylexer-actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 16px;
+}
+
+.blossom-feminine-paylexer.notice .blossom-feminine-paylexer-button {
+	background: #5f47f6;
+	color: #fff;
+	border: 0;
+	border-radius: 2px;
+	padding: 9px 14px;
+	min-width: 138px;
+	font-weight: 500;
+	line-height: 1.4;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.blossom-feminine-paylexer.notice .blossom-feminine-paylexer-button:hover,
+.blossom-feminine-paylexer.notice .blossom-feminine-paylexer-button:focus {
+	background: #4a33d9;
+	color: #fff;
+	text-decoration: none;
+}
+
+.blossom-feminine-paylexer.notice .blossom-feminine-paylexer-button.is-busy {
+	opacity: .7;
+	cursor: progress;
+}
+
+.blossom-feminine-paylexer.notice .blossom-feminine-paylexer-link {
+	color: #5f47f6;
+	text-decoration: underline;
+}
+
+.blossom-feminine-paylexer.notice .blossom-feminine-paylexer-link:hover,
+.blossom-feminine-paylexer.notice .blossom-feminine-paylexer-link:focus {
+	color: #4a33d9;
+}
+
+.blossom-feminine-paylexer.notice .blossom-feminine-paylexer-dismiss {
+	position: absolute;
+	top: 10px;
+	right: 6px;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #1e1e1e;
+	text-decoration: none;
+	font-size: 20px;
+	line-height: 1;
+	font-weight: 600;
+}
+
+.rtl .blossom-feminine-paylexer.notice .blossom-feminine-paylexer-dismiss {
+	right: auto;
+	left: 6px;
+}
+
+.blossom-feminine-paylexer.notice .blossom-feminine-paylexer-dismiss:hover,
+.blossom-feminine-paylexer.notice .blossom-feminine-paylexer-dismiss:focus {
+	color: #5f47f6;
+	text-decoration: none;
+}
+
+/** PayLexer Recommendation Banner Ends */
